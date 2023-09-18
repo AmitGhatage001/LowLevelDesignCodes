@@ -6,9 +6,9 @@ public class Rectangle {
         this.height=height;
         this.width=width;
     }
-    Point topLeft;
-    int height;
-    int width;
+    static Point topLeft;
+    static int height;
+    static int width;
 
     int getPerimeter(){
         return 2*(height+width);
@@ -17,7 +17,7 @@ public class Rectangle {
         return height*width;
     }
 
-    Point getBottomRight(){
+    static Point getBottomRight(){
 
         int A = topLeft.x - height;
         int B = topLeft.y + width;
@@ -27,7 +27,7 @@ public class Rectangle {
 
     public static void main(String[] args) {
         Rectangle rec = new Rectangle(10,20);
-        Point p = new Point(15,20);
-        System.out.println("We are Good");
+        Point p = new Point(5,10);
+        Point ans = getBottomRight();
     }
 }
